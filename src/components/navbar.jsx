@@ -13,10 +13,12 @@ const Navbar = () => {
 
       <div
         className={`${
-          !mobile && "hidden sm:flex"
-        } text-white flex sm:flex-row flex-col items-center justify-center w-full sm:w-auto gap-3 sm:mt-0 mt-8 transition-all duration-500 `}
+          !mobile && "translate-x-full sm:translate-x-0 fixed sm:flex "
+        } ${
+          mobile && "translate-x-0 top-0 right-0"
+        } text-white flex sm:flex-row flex-col items-center justify-center w-full h-screen sm:h-auto sm:w-auto gap-3 sm:mt-0 mt-8 transition-all duration-500 z-30 sm:z-0 `}
       >
-        <ul className="flex sm:flex-row flex-col items-center sm:gap-8 gap-14 sm:text-sm text-lg sm:z-auto z-30 transition-all duration-500">
+        <ul className="flex sm:flex-row flex-col items-center sm:gap-8 gap-10 sm:text-sm text-2xl sm:z-auto ">
           <li className="cursor-pointer hover:border-b-2 hover:border-[#3671E9] hover:pb-1 transition-all duration-200">
             Product
           </li>
