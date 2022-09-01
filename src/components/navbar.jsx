@@ -11,14 +11,26 @@ const Navbar = () => {
 
       <div className="text-white flex items-center gap-3">
         <ul className="flex items-center gap-8 text-sm">
-          <li>Product</li>
-          <li>Features</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Login</li>
+          <li className="cursor-pointer hover:border-b-2 hover:border-[#3671E9] hover:pb-1 transition-all duration-200">
+            Product
+          </li>
+          <li className="cursor-pointer hover:border-b-2 hover:border-[#3671E9] hover:pb-1 transition-all duration-200">
+            Features
+          </li>
+          <li className="cursor-pointer hover:border-b-2 hover:border-[#3671E9] hover:pb-1 transition-all duration-200">
+            About
+          </li>
+          <li className="cursor-pointer hover:border-b-2 hover:border-[#3671E9] hover:pb-1 transition-all duration-200">
+            Contact
+          </li>
+          <li className="cursor-pointer hover:border-b-2 hover:border-[#3671E9] hover:pb-1 transition-all duration-200">
+            Login
+          </li>
         </ul>
         <p>|</p>
-        <button>Register</button>
+        <button className="text-sm w-32 h-10 rounded-full bg-[#3671E9]">
+          Register
+        </button>
       </div>
     </div>
   );
