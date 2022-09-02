@@ -58,6 +58,15 @@ const Homepage = () => {
           </div>
         </div>
       </div>
+
+      <div className="text-center sm:mt-52 mt-96 font-rubik">
+        <p className="font-bold sm:text-3xl text-lg sm:mb-3 mb-2">
+          Trade securely and market the high
+        </p>
+        <p className="font-bold sm:text-3xl text-lg sm:mb-3 mb-2">
+          growth cryptocurrencies.
+        </p>
+      </div>
     </div>
   );
 };
