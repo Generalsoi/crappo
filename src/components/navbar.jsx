@@ -6,14 +6,20 @@ const Navbar = () => {
 
   return (
     <div className="bg-[#0D0D2B] flex sm:flex-row flex-col sm:items-center items-start justify-between sm:py-8 sm:px-16 p-4 font-rubik relative ">
-      <div className="flex items-center gap-1">
+      <div
+        className={`${!mobile && " top-4"} ${
+          mobile && "sm:top-4"
+        } flex items-center gap-1`}
+      >
         <img src={Logo} alt="crappo logo" />
         <h1 className="text-white uppercase text-lg sm:text-base">crappo</h1>
       </div>
 
       <div
-        className={`${!mobile && "translate-x-full fixed sm:inherit "} ${
-          mobile && "translate-x-0 top-0 right-0 sm:top-auto sm:right-auto"
+        className={` ${
+          mobile
+            ? " translate-x-0 top-0 right-0 "
+            : "fixed sm:static translate-x-full sm:translate-x-0"
         } text-white flex sm:flex-row flex-col items-center justify-center w-full h-screen sm:h-auto sm:w-auto gap-3 sm:mt-0 mt-8 transition-all duration-500 z-30 sm:z-1 `}
       >
         <ul className="flex sm:flex-row flex-col items-center sm:gap-8 gap-10 sm:text-sm text-2xl sm:z-1 ">
