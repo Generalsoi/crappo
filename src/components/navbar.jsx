@@ -47,7 +47,7 @@ const Navbar = () => {
 
       {!mobile ? (
         <div
-          className="fixed top-6 right-4 sm:hidden z-50"
+          className="absolute top-6 right-4 sm:hidden z-50"
           onClick={() => {
             setMobile(true);
           }}
@@ -58,7 +58,7 @@ const Navbar = () => {
         </div>
       ) : (
         <div
-          className="fixed top-6 right-3 sm:hidden z-50 "
+          className="absolute top-6 right-3 sm:hidden z-50 "
           onClick={() => {
             setMobile(false);
           }}
