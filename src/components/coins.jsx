@@ -11,7 +11,7 @@ const Coins = () => {
   const [hoverThree, setHoverThree] = useState(false);
 
   return (
-    <div className="flex sm:flex-row flex-col items-center justify-center gap-16 sm:gap-8 sm:px-8 sm:py-10 p-4 font-rubik bg-gray-50">
+    <div className="flex sm:flex-row flex-col items-center justify-center gap-16 sm:gap-8 sm:px-8 sm:py-20 p-4 font-rubik bg-gray-50">
       <div
         className="cursor-pointer sm:w-64 w-[90%] h-fit px-4 sm:py-10 py-16 rounded-lg text-center bg-white hover:bg-[#2B076E] hover:text-white "
         onMouseEnter={() => setHover(true)}
