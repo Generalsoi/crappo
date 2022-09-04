@@ -3,6 +3,7 @@ import Intro from "./intro";
 import Navbar from "./navbar";
 import Details from "./details";
 import Whycrappo from "./whycrappo";
+import Coins from "./coins";
 
 const Homepage = () => {
   return (
@@ -67,6 +68,8 @@ const Homepage = () => {
           growth cryptocurrencies.
         </p>
       </div>
+
+      <Coins />
     </div>
   );
 };
