@@ -92,7 +92,7 @@ const Coins = () => {
           <img className="w-10 h-10" src={Litecoin} alt="litecoin" />
         </div>
         <div className="flex items-start justify-center">
-          <h3 className="font-bold text-xl">Litecoin</h3>{" "}
+          <h3 className="font-bold text-xl">Litecoin</h3>
           <span className="text-xs text-[#BDBDBD]">LTC</span>
         </div>
 

@@ -4,6 +4,7 @@ import Navbar from "./navbar";
 import Details from "./details";
 import Whycrappo from "./whycrappo";
 import Coins from "./coins";
+import Investment from "./investment";
 
 const Homepage = () => {
   return (
@@ -70,6 +71,7 @@ const Homepage = () => {
       </div>
 
       <Coins />
+      <Investment />
     </div>
   );
 };
