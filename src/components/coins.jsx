@@ -31,7 +31,7 @@ const Coins = () => {
 
         {hover ? (
           <div className="flex items-center justify-center">
-            <button className="flex items-center w-32 h-10 rounded-full bg-[#3671E9] text-white text-xs p-2 gap-4">
+            <button className="flex items-center justify-center w-36 h-10 rounded-full bg-[#3671E9] text-white text-xs p-2 gap-4">
               Start mining <img className="w-6 h-6" src={Arrow} alt="" />
             </button>
           </div>
@@ -67,7 +67,7 @@ const Coins = () => {
 
         {hovertwo ? (
           <div className="flex items-center justify-center">
-            <button className="flex items-center w-32 h-10 rounded-full bg-[#3671E9] text-white text-xs p-2 gap-4">
+            <button className="flex items-center justify-center w-36 h-10 rounded-full bg-[#3671E9] text-white text-xs p-2 gap-4">
               Start mining <img className="w-6 h-6" src={Arrow} alt="" />
             </button>
           </div>
@@ -102,7 +102,7 @@ const Coins = () => {
 
         {hoverThree ? (
           <div className="flex items-center justify-center">
-            <button className="flex items-center w-32 h-10 rounded-full bg-[#3671E9] text-white text-xs p-2 gap-4">
+            <button className="flex items-center justify-center w-36 h-10 rounded-full bg-[#3671E9] text-white text-xs p-2 gap-4">
               Start mining <img className="w-6 h-6" src={Arrow} alt="" />
             </button>
           </div>
