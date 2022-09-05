@@ -15,11 +15,14 @@ const Investment = () => {
   useEffect(() => {
     gsap.fromTo(
       chartRef.current,
-      { opacity: 0, y: 10 },
+      { opacity: 0, y: 30 },
       {
         opacity: 1,
         duration: 5,
         y: 0,
+        scrollTrigger: {
+          trigger: "#chart",
+        },
       }
     );
   }, []);
@@ -27,11 +30,14 @@ const Investment = () => {
   useEffect(() => {
     gsap.fromTo(
       statRef.current,
-      { opacity: 0, y: 10 },
+      { opacity: 0, y: 50 },
       {
         opacity: 1,
         duration: 5,
         y: 0,
+        scrollTrigger: {
+          trigger: "#stat",
+        },
       }
     );
   }, []);
@@ -39,11 +45,14 @@ const Investment = () => {
   useEffect(() => {
     gsap.fromTo(
       tableRef.current,
-      { opacity: 0, y: 10 },
+      { opacity: 0, x: 50 },
       {
         opacity: 1,
         duration: 5,
-        y: 0,
+        x: 0,
+        scrollTrigger: {
+          trigger: "#table",
+        },
       }
     );
   }, []);
@@ -78,6 +87,7 @@ const Investment = () => {
           src={Chart}
           alt="chart"
           ref={chartRef}
+          id="chart"
         />
       </div>
 
@@ -87,6 +97,7 @@ const Investment = () => {
           src={Statistic}
           alt="statistic"
           ref={statRef}
+          id="stat"
         />
         <div className="sm:w-1/3">
           <h4 className="font-bold text-2xl">Detailed Statistics</h4>
@@ -117,6 +128,7 @@ const Investment = () => {
           src={Table}
           alt="table"
           ref={tableRef}
+          id="table"
         />
       </div>
     </div>
