@@ -6,12 +6,12 @@ import Bitcoin from "../assets/images/Bitcoinlogo.png";
 import Facebook from "../assets/images/facebook.png";
 import Instagram from "../assets/images/instagram.png";
 import Linkedin from "../assets/images/linkedin.png";
-import Twitte from "../assets/images/twitter.png";
+import Twitter from "../assets/images/twitter.png";
 import Youtube from "../assets/images/youtube.png";
 
 const Footer = () => {
   return (
-    <div className="bg-[#0D0D2B] text-white font-rubik sm:p-[7%] py-10 px-6">
+    <div className="bg-[#0D0D2B] text-white font-rubik sm:p-[7%] sm:pb-16 py-10 px-6">
       <div className="flex sm:flex-row flex-col sm:items-start sm:justify-between">
         <div className="flex gap-3 items-center">
           <img src={Logo} alt="logo" />
@@ -37,7 +37,7 @@ const Footer = () => {
             <li className="text-xs mb-3">Interest</li>
           </ul>
         </div>
-        <div className="sm:mt-0 mt-8">
+        <div className="sm:mt-0 mt-8 flex flex-col items-center">
           <h6 className="font-bold text-2xl">We accept following</h6>
           <h6 className="font-bold text-2xl">payment systems</h6>
           <div className="flex gap-8 items-center mt-8">
@@ -47,14 +47,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="flex sm:flex-row flex-col mt-20 items-center justify-between">
         <p>&#169;2022. All rights reserved</p>
-        <div>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+        <div className="flex items-center gap-2 sm:mt-0 mt-4">
+          <img src={Facebook} alt="facebook" />
+          <img src={Instagram} alt="instagram" />
+          <img src={Youtube} alt="youtube" />
+          <img src={Twitter} alt="twitter" />
+          <img src={Linkedin} alt="linkedin" />
         </div>
       </div>
     </div>
