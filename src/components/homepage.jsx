@@ -6,6 +6,7 @@ import Whycrappo from "./whycrappo";
 import Coins from "./coins";
 import Investment from "./investment";
 import Mine from "./mine";
+import Footer from "./footer";
 
 const Homepage = () => {
   return (
@@ -74,6 +75,7 @@ const Homepage = () => {
       <Coins />
       <Investment />
       <Mine />
+      <Footer />
     </div>
   );
 };
