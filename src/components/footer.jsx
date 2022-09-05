@@ -3,46 +3,60 @@ import Logo from "../assets/images/Logo.png";
 import Visa from "../assets/images/Visa.png";
 import MasterCard from "../assets/images/Mastercard.png";
 import Bitcoin from "../assets/images/Bitcoinlogo.png";
+import Facebook from "../assets/images/facebook.png";
+import Instagram from "../assets/images/instagram.png";
+import Linkedin from "../assets/images/linkedin.png";
+import Twitte from "../assets/images/twitter.png";
+import Youtube from "../assets/images/youtube.png";
 
 const Footer = () => {
   return (
-    <div>
-      <div>
-        <div>
+    <div className="bg-[#0D0D2B] text-white font-rubik sm:p-[7%] py-10 px-6">
+      <div className="flex sm:flex-row flex-col sm:items-start sm:justify-between">
+        <div className="flex gap-3 items-center">
           <img src={Logo} alt="logo" />
-          <h2>crappo</h2>
+          <h2 className="uppercase text-lg font-bold">crappo</h2>
         </div>
-        <div>
-          <h4>Quick link</h4>
+        <div className="sm:mt-0 mt-8">
+          <h4 className="font-bold text-lg mb-4">Quick link</h4>
           <ul>
-            <li>Home</li>
-            <li>Product</li>
-            <li>About</li>
-            <li>Features</li>
-            <li>Contact</li>
+            <li className="text-xs mb-3">Home</li>
+            <li className="text-xs mb-3">Product</li>
+            <li className="text-xs mb-3">About</li>
+            <li className="text-xs mb-3">Features</li>
+            <li className="text-xs mb-3">Contact</li>
           </ul>
         </div>
-        <div>
-          <h4>Resources</h4>
+        <div className="sm:mt-0 mt-8">
+          <h4 className="font-bold text-lg mb-4">Resources</h4>
           <ul>
-            <li>Download Whitepaper</li>
-            <li>Smart Token</li>
-            <li>Blockchain Explorer</li>
-            <li>Crypto API</li>
-            <li>Interest</li>
+            <li className="text-xs mb-3">Download Whitepaper</li>
+            <li className="text-xs mb-3">Smart Token</li>
+            <li className="text-xs mb-3">Blockchain Explorer</li>
+            <li className="text-xs mb-3">Crypto API</li>
+            <li className="text-xs mb-3">Interest</li>
           </ul>
         </div>
-        <div>
-          <h6>We accept following</h6>
-          <h6>payment systems</h6>
-          <div>
-            <img src={Visa} alt="visa" />
-            <img src={MasterCard} alt="mastercard" />
-            <img src={Bitcoin} alt="bitcoin" />
+        <div className="sm:mt-0 mt-8">
+          <h6 className="font-bold text-2xl">We accept following</h6>
+          <h6 className="font-bold text-2xl">payment systems</h6>
+          <div className="flex gap-8 items-center mt-8">
+            <img className="w-12 h-8" src={Visa} alt="visa" />
+            <img className="w-12 h-8" src={MasterCard} alt="mastercard" />
+            <img className="w-12 h-8" src={Bitcoin} alt="bitcoin" />
           </div>
         </div>
       </div>
-      <div></div>
+      <div>
+        <p>&#169;2022. All rights reserved</p>
+        <div>
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+        </div>
+      </div>
     </div>
   );
 };
