@@ -1,4 +1,4 @@
-# Frontend Mentor - Interactive rating component solution
+# Crappo
 
 This is a blockchain solution landing page built using reactjs and tailwind css. I also used gsap for light animations.
 
