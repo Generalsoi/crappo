@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Intro from "./intro";
 import Navbar from "./navbar";
 import Details from "./details";
@@ -7,8 +7,34 @@ import Coins from "./coins";
 import Investment from "./investment";
 import Mine from "./mine";
 import Footer from "./footer";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Homepage = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  let earnRef = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(
+      earnRef.current,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: "#earn",
+          triggerActions: "restart pause reverse pause",
+          start: "top center",
+          end: "bottom top",
+        },
+      }
+    );
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -27,7 +53,11 @@ const Homepage = () => {
           Exercitation veniam consequat sunt nostrud amet.
         </p>
 
-        <div className="absolute sm:w-1/2 w-[90%] h-60 bg-white sm:left-[25%] left-4 mt-8 rounded-lg p-8 font-rubik">
+        <div
+          className="absolute sm:w-1/2 w-[90%] h-60 bg-white sm:left-[25%] left-4 mt-8 rounded-lg p-8 font-rubik"
+          ref={earnRef}
+          id="earn"
+        >
           <div className="flex sm:flex-row flex-col sm:gap-3 gap-8 w-full">
             <input
               className="sm:w-3/5 w-full border-b-[#E0E0E0] border-b-2 text-sm text-[#0D0D2B]"

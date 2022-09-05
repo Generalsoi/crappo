@@ -1,12 +1,52 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import BlockchainIllustration from "../assets/images/Illustration.png";
 import ArrowRight from "../assets/images/Arrow.png";
 import Bar from "../assets/images/bar.png";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Intro = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  let bcRef = useRef();
+  let introRef = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(
+      bcRef.current,
+      {
+        opacity: 0,
+        y: -20,
+      },
+      {
+        opacity: 1,
+        duration: 5,
+        y: 0,
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      introRef.current,
+      {
+        opacity: 0,
+        y: -20,
+      },
+      {
+        opacity: 1,
+        duration: 10,
+        y: 0,
+      }
+    );
+  }, []);
+
   return (
-    <div className="flex relative sm:flex-row flex-col w-full px-4 py-10 sm:p-0 items-center bg-[#0D0D2B] gap-8 font-rubik text-white justify-center">
-      <div>
+    <div
+      className="flex relative sm:flex-row flex-col w-full px-4 py-10 sm:p-0 items-center bg-[#0D0D2B] gap-8 font-rubik text-white justify-center"
+      id="intro"
+    >
+      <div ref={introRef}>
         <div
           className="flex items-center gap-2 relative w-fit rounded-full pr-2 text-xs h-8"
           style={{ background: "rgba(255, 255, 255, 0.1)" }}
@@ -36,7 +76,11 @@ const Intro = () => {
           Try for FREE <img src={ArrowRight} alt="arrow-right" />
         </button>
       </div>
-      <img src={BlockchainIllustration} alt="blockchain illustration" />
+      <img
+        ref={bcRef}
+        src={BlockchainIllustration}
+        alt="blockchain illustration"
+      />
 
       <img src={Bar} className="fixed -z-10 top-1/2 right-1/3" alt="" />
     </div>

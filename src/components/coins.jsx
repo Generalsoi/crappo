@@ -1,17 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Bitcoin from "../assets/images/bitcoin.png";
 import Ethereum from "../assets/images/ethereum.png";
 import Litecoin from "../assets/images/litecoin.png";
 import ArrowRight from "../assets/images/rightarrow.png";
 import Arrow from "../assets/images/Arrow.png";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Coins = () => {
   const [hover, setHover] = useState(false);
   const [hovertwo, setHoverTwo] = useState(false);
   const [hoverThree, setHoverThree] = useState(false);
+  gsap.registerPlugin(ScrollTrigger);
+
+  let coinRef = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(
+      coinRef.current,
+      { y: 100 },
+      {
+        y: 0,
+        scrollTrigger: {
+          trigger: "#coin",
+          start: "top center",
+          end: "bottom 80%",
+          duration: 5,
+        },
+      }
+    );
+  }, []);
 
   return (
-    <div className="flex sm:flex-row flex-col items-center justify-center gap-16 sm:gap-8 sm:px-8 sm:py-20 p-4 font-rubik bg-gray-50">
+    <div
+      className="flex sm:flex-row flex-col items-center justify-center gap-16 sm:gap-8 sm:px-8 sm:py-20 p-4 font-rubik bg-gray-50"
+      ref={coinRef}
+      id="coin"
+    >
       <div
         className="cursor-pointer sm:w-64 w-[90%] h-fit px-4 sm:py-10 py-16 rounded-lg text-center bg-white hover:bg-[#2B076E] hover:text-white "
         onMouseEnter={() => setHover(true)}

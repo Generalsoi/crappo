@@ -1,9 +1,53 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Chart from "../assets/images/Chart.png";
 import Statistic from "../assets/images/Statistic.png";
 import Table from "../assets/images/Table.png";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Investment = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  let chartRef = useRef();
+  let statRef = useRef();
+  let tableRef = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(
+      chartRef.current,
+      { opacity: 0, y: 10 },
+      {
+        opacity: 1,
+        duration: 5,
+        y: 0,
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      statRef.current,
+      { opacity: 0, y: 10 },
+      {
+        opacity: 1,
+        duration: 5,
+        y: 0,
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      tableRef.current,
+      { opacity: 0, y: 10 },
+      {
+        opacity: 1,
+        duration: 5,
+        y: 0,
+      }
+    );
+  }, []);
+
   return (
     <div className="bg-[#2B076E] py-20 text-white font-rubik">
       <div className="text-center p-4">
@@ -15,7 +59,10 @@ const Investment = () => {
         </h2>
       </div>
 
-      <div className="flex sm:flex-row flex-col w-full sm:px-[7%] sm:py-10 p-6 pt-20 gap-20">
+      <div
+        className="flex sm:flex-row flex-col w-full sm:px-[7%] sm:py-10 p-6 pt-20 gap-20"
+        id="investment"
+      >
         <div className="sm:w-1/3">
           <h4 className="font-bold text-2xl">Invest Smart</h4>
           <p className="text-xs my-6">
@@ -26,11 +73,21 @@ const Investment = () => {
             Learn more
           </button>
         </div>
-        <img className="sm:w-[45%] w-full" src={Chart} alt="chart" />
+        <img
+          className="sm:w-[45%] w-full"
+          src={Chart}
+          alt="chart"
+          ref={chartRef}
+        />
       </div>
 
       <div className="flex sm:flex-row flex-col-reverse items-center w-full gap-20 sm:pr-[7%] sm:pl-0 p-6 mt-20">
-        <img className="sm:w-[50%] w-full" src={Statistic} alt="statistic" />
+        <img
+          className="sm:w-[50%] w-full"
+          src={Statistic}
+          alt="statistic"
+          ref={statRef}
+        />
         <div className="sm:w-1/3">
           <h4 className="font-bold text-2xl">Detailed Statistics</h4>
           <p className="text-xs my-6">
@@ -55,7 +112,12 @@ const Investment = () => {
             Learn more
           </button>
         </div>
-        <img className="sm:w-[50%] w-full" src={Table} alt="table" />
+        <img
+          className="sm:w-[50%] w-full"
+          src={Table}
+          alt="table"
+          ref={tableRef}
+        />
       </div>
     </div>
   );

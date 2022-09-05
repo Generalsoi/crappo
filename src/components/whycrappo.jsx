@@ -1,12 +1,63 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Illustration from "../assets/images/Illustrationtwo.png";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Whycrappo = () => {
-  return (
-    <div className="flex sm:flex-row flex-col-reverse items-center w-full  font-rubik justify-center bg-[#0D0D2B] text-white">
-      <img src={Illustration} alt="illustration-two" />
+  gsap.registerPlugin(ScrollTrigger);
+  let bcRefTwo = useRef();
+  let whycrappoRef = useRef();
 
-      <div className="px-2 py-10 sm:p-0">
+  useEffect(() => {
+    gsap.fromTo(
+      bcRefTwo.current,
+      {
+        opacity: 0,
+        x: -50,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 3,
+        scrollTrigger: {
+          trigger: "#whycrappo",
+          start: "top center",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      whycrappoRef.current,
+      {
+        opacity: 0,
+        x: 50,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 3,
+        scrollTrigger: {
+          trigger: "#whycrappo",
+          start: "top center",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+
+  return (
+    <div
+      className="flex sm:flex-row flex-col-reverse items-center w-full  font-rubik justify-center bg-[#0D0D2B] text-white"
+      id="whycrappo"
+    >
+      <img ref={bcRefTwo} src={Illustration} alt="illustration-two" />
+
+      <div className="px-2 py-10 sm:p-0" ref={whycrappoRef}>
         <p className="font-bold text-3xl sm:text-4xl mb-2">
           Why you should choose
         </p>
