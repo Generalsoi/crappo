@@ -52,7 +52,7 @@ const Whycrappo = () => {
 
   return (
     <div
-      className="flex sm:flex-row flex-col-reverse items-center w-full  font-rubik justify-center bg-[#0D0D2B] text-white"
+      className="flex lg:flex-row flex-col-reverse items-center w-full  font-rubik justify-center bg-[#0D0D2B] text-white"
       id="whycrappo"
     >
       <img ref={bcRefTwo} src={Illustration} alt="illustration-two" />

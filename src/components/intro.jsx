@@ -43,7 +43,7 @@ const Intro = () => {
 
   return (
     <div
-      className="flex relative sm:flex-row flex-col w-full px-4 py-10 sm:p-0 items-center bg-[#0D0D2B] gap-8 font-rubik text-white justify-center"
+      className="flex relative lg:flex-row flex-col w-full px-4 py-10 sm:p-0 items-center bg-[#0D0D2B] gap-8 font-rubik text-white justify-center"
       id="intro"
     >
       <div ref={introRef}>
